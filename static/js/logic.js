@@ -80,4 +80,30 @@ function createMap(earthquakes) {
     id: "mapbox.light",
     accessToken: API_KEY
   });
+
+  //Creating faultline layer
+  var faultline = new L.LayerGroup();
+
+  //BaseMaps object to hold base layers.
+  var baseMaps = {
+    "Outdoor Map": outdoorsmap,
+    "Greyscale Map": grayscalemap,
+    "Satellite Map": satellitemap
+  };
+
+  //Creating overlay object to hold layer.
+  var overlayMaps = {
+    Earthquakes: earthquakes,
+    FaultLines: faultLine
+  };
+
+  //Create map, giving it the streetmap and earthquake layers to display.
+  var myMap = L.map("map", {
+    center: [
+      37.09, -95.71
+    ],
+    zoom: 4,
+    layers: [outdoorsmap, earthquakes, faultLine]
+  });
+
 }
