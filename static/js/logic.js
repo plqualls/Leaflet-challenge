@@ -39,5 +39,19 @@ function circleColor(magnitude) {
     }
 }
 
+var earthquakes = L.geoJSON(earthquakeData, {
+    pointToLayer: function(earthquakeData, latlng) {
+        return L.circle(latlng, {
+            radius: radiusSize(earthquakeData.properties.mag),
+            color: circleColor(earthquakeData.properties.mag),
+            fillOpacity: 1
+        });
+    },
+    onEachFeature: onEachFeature
+});
+
+//Sending our earthquakes layer to the createMap function
+createMap(earthquakes);
+
 
 }
