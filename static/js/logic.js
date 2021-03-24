@@ -106,4 +106,14 @@ function createMap(earthquakes) {
     layers: [outdoorsmap, earthquakes, faultLine]
   });
 
+  //Create a layer control,add the layer to control the map.
+  L.control.layers(baseMaps, overlayMaps, {
+      collapsed:false
+  }).addTo(myMap);
+
+  //Query to retrieve the faultline data
+  var faultlinequery = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
+
+  
+
 }
