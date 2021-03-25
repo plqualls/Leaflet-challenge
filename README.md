@@ -18,7 +18,7 @@ to visualize the data efficiently and better educate the public and other govern
 <li>Data markers should reflect the magnitude of the earthquake by their size and depth of the 
 earthquake by color. Earquakes with high magnitudes should appear larger and earthquakes
 with greater depth should appear darker in color.</li>
-<li>Include popups that provide additional information about the earthquake when a marker is clicked.<li>
+<li>Include popups that provide additional information about the earthquake when a marker is clicked.</li>
 <li>Create a legend that will provide context for your map data.</li>
 </ol>
 
